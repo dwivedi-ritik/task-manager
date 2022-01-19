@@ -1,6 +1,8 @@
 #!/bin/bash
 
 pip install -r requirements.txt
+python create_table.py
+
 
 curr_dir=$(pwd)
 

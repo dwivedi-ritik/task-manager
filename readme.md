@@ -28,7 +28,7 @@ options:
 database=db_name
 username=usr_name
 ```
-- just run `./setup.sh`
+- After that just run `./setup.sh`
 
 That's it now add your new task using 
 
@@ -46,5 +46,8 @@ $ task -T
 ### Prerequisites
 
 - Make sure you have install Postgresql in your system
-- 
+- Double check the deamon is running or not 
+```shell
+$ sudo systemctl restart postgresql
+```
 
