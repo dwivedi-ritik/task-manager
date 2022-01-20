@@ -14,10 +14,11 @@ Command line task tracker
 options:
   -h, --help         show this help message and exit
   --mark , -M        Mark you task complete , pass task id
+  --delete , -D      Delete your tasks , pass task id
   --add-task, -T     Add some other task
   --fetch-all, -A    Get all of your tasks
   --fetch-com, -C    Get list of completed tasks
-  --fetch-incom, -I  Get list of completed tasks
+  --fetch-incom, -I  Get list of incomplete tasks
 
 ```
 

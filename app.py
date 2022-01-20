@@ -46,6 +46,14 @@ def fetch_incomplete():
     conn.close()
     return res
 
+def delete_record(_id):
+    command = "DELETE FROM Tasks WHERE key = %s"
+    params = (_id , )
+    db.execute(command , params)
+    conn.commit()
+    db.close()
+    conn.close()
+
 def mark_complete(_id):
     command = "UPDATE Tasks SET status = %s WHERE key = %s"
     params = ('completed' , _id)

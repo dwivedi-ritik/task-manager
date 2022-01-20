@@ -11,10 +11,11 @@ def print_table(table):
 
 parser = argparse.ArgumentParser(description="Command line task tracker" , epilog="")
 parser.add_argument("--mark" , "-M" , help="Mark you task complete , pass task id" , dest="mark" , metavar='')
+parser.add_argument("--delete" , "-D" , help="Delete your tasks , pass task id" , dest="delete" , metavar='')
 parser.add_argument("--add-task" , "-T" , help="Add some other task" , action='store_true' , dest='task')
 parser.add_argument("--fetch-all" , "-A" , help="Get all of your tasks" , action='store_true' , dest='all_tasks')
 parser.add_argument("--fetch-com" , "-C" , help="Get list of completed tasks" , action='store_true' , dest="com")
-parser.add_argument("--fetch-incom" , "-I" , help="Get list of completed tasks" , action='store_true' , dest="icom")
+parser.add_argument("--fetch-incom" , "-I" , help="Get list of incomplete tasks" , action='store_true' , dest="icom")
 
 args = parser.parse_args()
 
@@ -36,6 +37,9 @@ if args.com:
     table = app.fetch_completed()
     print_table(table)
 
+if args.delete:
+    app.delete_record(args.delete)
+    print("Task deleted")
 
 if args.icom:
     table = app.fetch_incomplete()
