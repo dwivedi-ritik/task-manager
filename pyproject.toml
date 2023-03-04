@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "task-manager"
+version = "0.1.0"
+description = "Task tracker"
+authors = ["dwivedi-ritik <dwi.ritik20@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "task_manager"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg2 = "^2.9.4"
+tabulate = "^0.9.0"
+python-dotenv = "^0.21.0"
+rich = "^12.6.0"
+sqlalchemy = "^2.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
